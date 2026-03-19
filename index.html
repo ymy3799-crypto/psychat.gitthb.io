@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindLane | 登录</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="ambient ambient-auth"></div>
+
+    <main class="auth-shell auth-shell-simple">
+      <section class="auth-brand auth-brand-simple">
+        <h1>一个可以陪你聊聊近况、整理想法的对话平台。</h1>
+      </section>
+
+      <section class="auth-card">
+        <header class="auth-card-head">
+          <div>
+            <p class="eyebrow">Welcome</p>
+            <h2>登录或注册</h2>
+          </div>
+          <div class="tab-switch" role="tablist" aria-label="登录或注册">
+            <button class="tab-button active" data-tab="login" role="tab" aria-selected="true">
+              登录
+            </button>
+            <button class="tab-button" data-tab="register" role="tab" aria-selected="false">
+              注册
+            </button>
+          </div>
+        </header>
+
+        <div id="authFeedback" class="feedback" aria-live="polite"></div>
+
+        <form id="loginForm" class="auth-form active" novalidate>
+          <label class="field">
+            <span>邮箱</span>
+            <input type="email" name="email" placeholder="请输入邮箱" autocomplete="email" required />
+          </label>
+
+          <label class="field">
+            <span>密码</span>
+            <div class="password-wrap">
+              <input
+                type="password"
+                name="password"
+                placeholder="请输入密码"
+                autocomplete="current-password"
+                minlength="6"
+                required
+              />
+              <button type="button" class="ghost-button toggle-password">显示</button>
+            </div>
+          </label>
+
+          <button type="submit" class="primary-button">进入</button>
+        </form>
+
+        <form id="registerForm" class="auth-form" novalidate>
+          <label class="field">
+            <span>昵称（可选）</span>
+            <input type="text" name="displayName" placeholder="请输入昵称" autocomplete="nickname" />
+          </label>
+
+          <label class="field">
+            <span>邮箱</span>
+            <input type="email" name="email" placeholder="请输入邮箱" autocomplete="email" required />
+          </label>
+
+          <label class="field">
+            <span>密码</span>
+            <div class="password-wrap">
+              <input
+                type="password"
+                name="password"
+                placeholder="至少 6 位密码"
+                autocomplete="new-password"
+                minlength="6"
+                required
+              />
+              <button type="button" class="ghost-button toggle-password">显示</button>
+            </div>
+          </label>
+
+          <label class="field">
+            <span>确认密码</span>
+            <div class="password-wrap">
+              <input
+                type="password"
+                name="confirmPassword"
+                placeholder="请再次输入密码"
+                autocomplete="new-password"
+                minlength="6"
+                required
+              />
+              <button type="button" class="ghost-button toggle-password">显示</button>
+            </div>
+          </label>
+
+          <button type="submit" class="primary-button">创建账号</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./auth.js"></script>
+  </body>
+</html>
