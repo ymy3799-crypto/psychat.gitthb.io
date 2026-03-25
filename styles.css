@@ -552,9 +552,9 @@ textarea:focus {
 
 .round-counter {
   position: fixed;
-  top: 22px;
-  right: 22px;
-  z-index: 20;
+  left: 22px;
+  bottom: 22px;
+  z-index: 60;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1142,8 +1142,8 @@ body.sidebar-collapsed #logoutButton {
   }
 
   .round-counter {
-    top: 16px;
-    right: 16px;
+    left: 16px;
+    bottom: 16px;
   }
 }
 
@@ -1187,8 +1187,8 @@ body.sidebar-collapsed #logoutButton {
 
   .round-counter {
     justify-content: center;
-    top: 12px;
-    right: 12px;
+    left: 12px;
+    bottom: 12px;
     min-height: 40px;
     padding: 0 12px;
     font-size: 13px;
@@ -1245,3 +1245,4 @@ body.sidebar-collapsed #logoutButton {
     line-height: 1.2;
   }
 }
+
