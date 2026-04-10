@@ -1,4 +1,4 @@
-const API_BASE = "https://psychat-jhpbnpbkpx.cn-hongkong.fcapp.run/api";
+const API_BASE = "https://api.psychat.site/api";
 const SESSION_STORAGE_KEY = "mindlane_session";
 
 const measureForm = document.getElementById("measureForm");
